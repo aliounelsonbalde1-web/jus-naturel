@@ -152,6 +152,11 @@
   transform: scale(1.1);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
 }
+@media (max-width: 576px) {
+  .product-card {
+    border-radius: 12px;
+  }
+}
 
   </style>
 </head>
@@ -779,7 +784,7 @@ const PRODUCTS = [
 
       PRODUCTS.forEach(p => {
         const col = document.createElement("div");
-        col.className = "col-12 col-sm-6 col-md-4 col-lg-3";
+        col.className = "col-6 col-md-4 col-lg-3";
         const favActive = favorites.includes(p.id);
         col.innerHTML = `
           <div class="card product-card h-100">
@@ -1064,8 +1069,8 @@ const PRODUCTS = [
     }
 
     // --- WhatsApp redirection ---
-    // Numéro au Sénégal (221) fourni: 78 287 58 37
-    const WHATSAPP_NUMBER_INTL = "221782875837";
+    // Numéro au Sénégal (221) fourni: 76 679 24 29
+    const WHATSAPP_NUMBER_INTL = "221766792429";
     function buildWhatsAppLink(orderText) {
       return `https://wa.me/${WHATSAPP_NUMBER_INTL}?text=${encodeURIComponent(orderText)}`;
     }
